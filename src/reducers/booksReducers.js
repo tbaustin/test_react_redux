@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 //Books reducer
-export default function(state={book:{}}, action) {
+export default function(state={}, action) {
   switch(action.type) {
     case "GET_BOOK":
       return _.mapKeys(action.payload, 'id');

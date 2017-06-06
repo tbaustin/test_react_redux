@@ -13,8 +13,8 @@ class BooksList extends Component {
     this.props.getBooks();
   }
   renderList() {
-    console.log(this.props.books);
-    return _.map(this.props.books, book => {
+    return _.map(this.props.books, (book, key) => {
+      console.log(book);
       return(
         <ul key={book.id}>
           <h2>{book.id}</h2>
