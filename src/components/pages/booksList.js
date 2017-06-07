@@ -4,6 +4,9 @@ import _ from 'lodash';
 import {getBooks} from '../../actions/booksActions';
 import {Grid, Col, Row, Button} from 'react-bootstrap';
 
+import BookItem from './bookItem';
+import BooksForm from './booksForm';
+
 class BooksList extends Component {
   constructor(props) {
     super(props);
@@ -16,12 +19,14 @@ class BooksList extends Component {
   renderList() {
     return _.map(this.props.books, (book, key) => {
       return(
-        <ul key={book.id}>
-          <h2>{book.title}</h2>
-          <h2>{book.description}</h2>
-          <h2>{book.price}</h2>
-          <button className="btn btn-primary">Buy now</button>
-        </ul>
+        <div className="col-xs-12 col-sm-6 col-md-4" key={book.id}>
+          <BookItem
+            id={book.id}
+            title={book.title}
+            description={book.description}
+            price={book.price}
+          />
+        </div>
       );
     });
   }
@@ -29,6 +34,9 @@ class BooksList extends Component {
     return (
       <div className="grid">
         <div id="row1" className="row">
+          <div className="col-xs-12 col-sm-6">
+            <BooksForm />
+          </div>
           {this.renderList()}
         </div>
       </div>
