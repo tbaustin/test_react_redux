@@ -10,6 +10,8 @@ import reducers from './reducers/index';
 import {addToCart} from './actions/cartActions';
 import {postBooks, deleteBook, updateBook} from './actions/booksActions';
 
+import '../style/style.css';
+
 
 const middleware = applyMiddleware(logger);
 const store = createStore(reducers, middleware);
