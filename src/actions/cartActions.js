@@ -1,9 +1,21 @@
 "use strict"
 
 export function addToCart(book) {
-  //-->> Cart ACTIONS <<--
   return {
     type: "ADD_TO_CART",
     payload: book
+  }
+}
+export function deleteCartItem(cartItem) {
+  return {
+    type: "DELETE_CART_ITEM",
+    payload: cartItem
+  }
+}
+export function updateCart(_id, unit) {
+  return {
+    type: "UPDATE_CART",
+    _id: _id,
+    unit: unit
   }
 }

@@ -1,22 +1,30 @@
 "use strict"
 
+
+export function postBooks(values) {
+  return {
+    type: "POST_BOOKS",
+    payload: values
+  }
+}
+
 export function getBooks() {
   return {
     type: "GET_BOOK",
     payload: [{
-      id: 2314123412,
+      _id: 1,
       title: 'this is the book title',
       description: 'book desc',
       price: 33.33
     },
     {
-      id: 23123423246554,
+      _id: 2,
       title: 'this is the book title for 23',
       description: 'book desc 23',
       price: 24.23
     },
     {
-      id: 2234566787908,
+      _id: 3,
       title: 'this is the asdfasdfook titleasdfr 2adsf',
       description: 'basdfk desc 23',
       price: 2324.23

@@ -1,3 +1,6 @@
 #row1 {
   margin-top: 15px;
 }
+.btn-group {
+  min-width: 300px;
+}
